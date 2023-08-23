@@ -62,7 +62,11 @@ class FilterableChipsAdapter
         final Chip chip = mDataSource.getFilteredChip(position);
 
         // Set the chip avatar, if possible
-        mOptions.mImageRenderer.renderAvatar(holder.image, chip);
+        if (chip.getAvatarUrl() != null || chip.getAvatarDrawable() != null) {
+                mOptions.mImageRenderer.renderAvatar(holder.image, chip);
+        } else {
+                holder.image.setVisibility(View.GONE)
+        }
 
         // Set the chip title
         holder.title.setText(chip.getTitle());
@@ -107,7 +111,7 @@ class FilterableChipsAdapter
      * references to the views in the filterable list item.
      */
     class Holder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        CircleImageView image;
+        CircleView ;
         TextView title, subtitle;
 
         Holder(View v) {

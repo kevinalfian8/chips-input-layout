@@ -65,7 +65,7 @@ class FilterableChipsAdapter
         if (chip.getAvatarUrl() != null || chip.getAvatarDrawable() != null) {
                 mOptions.mImageRenderer.renderAvatar(holder.image, chip);
         } else {
-                holder.image.setVisibility(View.GONE)
+                holder.image.setVisibility(View.GONE);
         }
 
         // Set the chip title

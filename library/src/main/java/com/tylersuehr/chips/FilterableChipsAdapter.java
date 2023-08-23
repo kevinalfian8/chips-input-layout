@@ -62,7 +62,7 @@ class FilterableChipsAdapter
         final Chip chip = mDataSource.getFilteredChip(position);
 
         // Set the chip avatar, if possible
-        if (chip.getAvatarUrl() != null || chip.getAvatarDrawable() != null) {
+        if (chip.getAvatarUri() != null || chip.getAvatarDrawable() != null) {
                 mOptions.mImageRenderer.renderAvatar(holder.image, chip);
         } else {
                 holder.image.setVisibility(View.GONE);

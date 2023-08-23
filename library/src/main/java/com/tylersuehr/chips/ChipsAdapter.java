@@ -147,7 +147,7 @@ class ChipsAdapter
                 }
 
                 // Request focus
-                mEditText.requestFocus();
+                // mEditText.requestFocus();
                 mEditText.setFocusableInTouchMode(true);
                 // Remove the tree listener
                 mEditText.getViewTreeObserver().removeOnGlobalLayoutListener(this);

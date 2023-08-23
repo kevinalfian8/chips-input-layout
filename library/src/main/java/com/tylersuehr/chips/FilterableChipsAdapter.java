@@ -111,7 +111,7 @@ class FilterableChipsAdapter
      * references to the views in the filterable list item.
      */
     class Holder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        CircleView image;
+        CircleImageView image;
         TextView title, subtitle;
 
         Holder(View v) {

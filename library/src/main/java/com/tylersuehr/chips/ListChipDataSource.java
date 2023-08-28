@@ -74,7 +74,7 @@ public class ListChipDataSource extends ObservableChipDataSource {
             chip.setFilterable(true);
             mOriginal.add(chip);
             
-            if (mSelected.contains(chip) == null)
+            if (!mSelected.contains(chip))
                 mFiltered.add(chip);
         }
 

@@ -66,7 +66,6 @@ public class ListChipDataSource extends ObservableChipDataSource {
         }
 
         // Instantiate our chip lists with the size of the given list
-        mSelected = new ArrayList<>();
         mOriginal = new ArrayList<>(chips.size());
         mFiltered = new ArrayList<>(chips.size());
 
@@ -74,7 +73,9 @@ public class ListChipDataSource extends ObservableChipDataSource {
         for (Chip chip : chips) {
             chip.setFilterable(true);
             mOriginal.add(chip);
-            mFiltered.add(chip);
+            
+            if (mSelected.contains(chip) == null)
+                mFiltered.add(chip);
         }
 
         // Sort the lists
